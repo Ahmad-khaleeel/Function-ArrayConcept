@@ -28,10 +28,13 @@ console.log(addCourse("Angular", "200Hr", "1-11-2025"));
 console.log(courses);
 
 
-const registerStudent =((studentName,CourseName)=>{
-    return `Hello ${studentName} your registeration was successfull please find your course ${findByName(CourseName)}    `
+const registerStudent =((studentName,courseName)=>{
+    
+  if(courseName === "FrontEnd react" || courseName === "BackEnd node" || courseName === "FullStack web" ){
+    return `Hello ${studentName} your registeration was successfull please find your course ${findByName(courseName)}`
+  }else{
+    return `Hello ${studentName} registeration failed, course not found`
+  }
 })
+console.log(registerStudent("Mona","FullStack web"));
 
-console.log(registerStudent("Mona", "FrontEnd react"));
-
- 
