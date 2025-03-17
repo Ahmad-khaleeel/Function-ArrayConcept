@@ -30,7 +30,7 @@ console.log(courses);
 
 const registerStudent =((studentName,courseName)=>{
     
-  if(courseName === "FrontEnd react" || courseName === "BackEnd node" || courseName === "FullStack web" ){
+  if(courseName.toLowerCase() === courses[0].coursename.toLowerCase() || courseName.toLowerCase() === courses[1].coursename.toLowerCase() || courseName.toLowerCase() === "FullStack web".toLowerCase() ){
     return `Hello ${studentName} your registeration was successfull please find your course ${findByName(courseName)}`
   }else{
     return `Hello ${studentName} registeration failed, course not found`
